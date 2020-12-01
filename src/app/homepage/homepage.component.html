@@ -1,0 +1,14 @@
+<p>Osnovni podaci</p>
+
+<form [formGroup]="competitionForm">
+  <select formControlName="competitionControl" [(ngModel)]="selectedCompetition">
+    <option value="" disabled="true">--odaberi natjecanje--</option>
+    <option [value]="competition.name" *ngFor="let competition of competitions">{{competition.name}}</option>
+  </select>
+
+  <input formControlName="additionControl" [(ngModel)]="addition">
+</form>
+
+<p>
+  Odabrano natjecanje je: {{ selectedCompetition }} {{addition}}
+</p>
