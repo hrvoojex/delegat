@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms'
 import competitionJson from "../../assets/competitions.json";
-
-interface ICompetition {
-    "name": string
-  }
+import { ICompetition } from "../model/ICompetition.interface";
 
 @Component({
   selector: 'app-homepage',
